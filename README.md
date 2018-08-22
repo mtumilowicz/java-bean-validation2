@@ -44,7 +44,7 @@ we test if it works (by filling with illegal values).
 
 In `AppRunner` we present exemplary error messages.
 
-# pom.xml
+## pom.xml
 * validation api:
 	```
 	<dependency>
@@ -88,7 +88,7 @@ allowing expressions inside the violation messages:
     
     `<java.el.version>3.0.0</java.el.version>`
 
-# example
+# manual
 Consider `User` entity with fields under validation (only that fields, all others are irrelevant):
 ```
 @NotEmpty(message = "Emails should be not empty")
