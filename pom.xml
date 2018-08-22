@@ -23,6 +23,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <java.el.version>3.0.0</java.el.version>
+        <hibernate.validator>6.0.12.Final</hibernate.validator>
     </properties>
 
     <dependencies>
@@ -42,10 +43,12 @@
         <dependency>
             <groupId>org.hibernate.validator</groupId>
             <artifactId>hibernate-validator</artifactId>
+            <version>${hibernate.validator}</version>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator-annotation-processor</artifactId>
+            <version>${hibernate.validator}</version>
         </dependency>
         <dependency>
             <groupId>javax.el</groupId>
