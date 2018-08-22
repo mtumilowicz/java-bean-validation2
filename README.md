@@ -51,25 +51,25 @@ List<@NotNull(message = "Email should be not null") @Email(message = "Only valid
 int rank;
 ```
 we construct invalid user:
-    ```
-    User user = User.builder()
-      .emails(Arrays.asList(null, "not valid email"))
-      .rank(-1)
-      .build();
-    ```
+```
+User user = User.builder()
+   .emails(Arrays.asList(null, "not valid email"))
+   .rank(-1)
+    .build();
+```
 then we try to save it to the database:
-    ```
-    try {
-        userRepository.save(user);
-    } catch (Exception ex) {
-        System.out.println(ex.getLocalizedMessage());
-    }
-    ```
+```
+try {
+    userRepository.save(user);
+} catch (Exception ex) {
+    System.out.println(ex.getLocalizedMessage());
+}
+```
 output:
-    ```
-    List of constraint violations:[
-	    ConstraintViolationImpl{interpolatedMessage='Only valid email', propertyPath=emails[1].<list element>, rootBeanClass=class com.example.javabeanvalidation2.User, messageTemplate='Only valid email'}
-	    ConstraintViolationImpl{interpolatedMessage='Rank should be >= 0', propertyPath=rank, rootBeanClass=class com.example.javabeanvalidation2.User, messageTemplate='{javax.validation.constraints.PositiveOrZero.message}'}
-	    ConstraintViolationImpl{interpolatedMessage='Email should be not null', propertyPath=emails[0].<list element>, rootBeanClass=class com.example.javabeanvalidation2.User, messageTemplate='Email should be not null'}
-    ]]
-    ```
+```
+List of constraint violations:[
+    ConstraintViolationImpl{interpolatedMessage='Only valid email', propertyPath=emails[1].<list element>, rootBeanClass=class com.example.javabeanvalidation2.User, messageTemplate='Only valid email'}
+    ConstraintViolationImpl{interpolatedMessage='Rank should be >= 0', propertyPath=rank, rootBeanClass=class com.example.javabeanvalidation2.User, messageTemplate='{javax.validation.constraints.PositiveOrZero.message}'}
+    ConstraintViolationImpl{interpolatedMessage='Email should be not null', propertyPath=emails[0].<list element>, rootBeanClass=class com.example.javabeanvalidation2.User, messageTemplate='Email should be not null'}
+]]
+```
