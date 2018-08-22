@@ -7,8 +7,7 @@ In this project we will cover only fields validation, note that JBV 2.0 is much 
 for example it supports constructor parameters validation or method's return type validation.
 
 # preface
-
-Useful annotations:
+Useful, self-expressive annotations:
 * @Valid,
 * @Past,
 * @Future
