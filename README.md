@@ -18,7 +18,8 @@ Useful, self-expressive annotations:
 * @Negative, 
 * @NegativeOrZero, 
 * @PastOrPresent,
-* @FutureOrPresent
+* @FutureOrPresent,
+* @Pattern
 
 If we want to validate relation object, for example:
 ```
