@@ -66,9 +66,7 @@ In `AppRunner` we present exemplary error messages.
         <version>${hibernate.validator}</version>
     </dependency>    
     ```
-    where:
-    
-    `<hibernate.validator>6.0.12.Final</hibernate.validator>`
+    where: `<hibernate.validator>6.0.12.Final</hibernate.validator>`
 
 * JSR 380 provides support for variable interpolation, 
 allowing expressions inside the violation messages:
@@ -84,9 +82,7 @@ allowing expressions inside the violation messages:
         <version>${java.el.version}</version>
     </dependency>
     ```
-    where:
-    
-    `<java.el.version>3.0.0</java.el.version>`
+    where: `<java.el.version>3.0.0</java.el.version>`
 
 # manual
 Consider `User` entity with fields under validation (only that fields, all others are irrelevant):
