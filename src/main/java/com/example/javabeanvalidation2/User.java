@@ -16,7 +16,7 @@ import java.util.List;
  */
 @Entity
 @Value
-@Builder
+@Builder(toBuilder = true)
 class User {
 
     @Id
@@ -26,9 +26,7 @@ class User {
     @NotNull(message = "Name cannot be null")
     String name;
 
-    boolean working;
-
-    @Size(min = 10, max = 200, message
+    @Size(min = 10, max = 30, message
             = "About Me must be between 10 and 200 characters")
     String aboutMe;
 
@@ -40,10 +38,7 @@ class User {
     @ElementCollection
     List<@NotNull(message = "Email should be not null") @Email(message = "Only valid email") String> emails;
     
-    @Past 
-    LocalDate dateOfBirth;
-    
-    @Future
+    @FutureOrPresent
     LocalDate expirationDate;
 
     @PositiveOrZero
