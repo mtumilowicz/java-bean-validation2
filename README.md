@@ -41,7 +41,7 @@ we test if it works (by filling with illegal values).
 In `AppRunner` we present exemplary error messages.
 
 # example
-Consider User entity with fields under validation (only that fields, all others are irrelevant):
+Consider `User` entity with fields under validation (only that fields, all others are irrelevant):
 ```
 @NotEmpty(message = "Emails should be not empty")
 @ElementCollection
