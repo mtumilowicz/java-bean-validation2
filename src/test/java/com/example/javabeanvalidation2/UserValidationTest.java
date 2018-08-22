@@ -16,7 +16,7 @@ import java.util.LinkedList;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class UserValidation {
+public class UserValidationTest {
 
     @Autowired
     private UserRepository userRepository;

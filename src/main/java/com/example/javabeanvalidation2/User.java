@@ -38,9 +38,9 @@ class User {
     @ElementCollection
     List<@NotNull(message = "Email should be not null") @Email(message = "Only valid email") String> emails;
     
-    @FutureOrPresent
+    @FutureOrPresent(message = "ExpirationDate should be now or in the future")
     LocalDate expirationDate;
 
-    @PositiveOrZero
+    @PositiveOrZero(message = "Rank should be >= 0")
     int rank;
 }
