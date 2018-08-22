@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/mtumilowicz/java-bean-validation2.svg?branch=master)](https://travis-ci.com/mtumilowicz/java-bean-validation2)
+
 # java-bean-validation2
 The main goal of this project is to show basic features of Java Bean Validation 2.0
 
