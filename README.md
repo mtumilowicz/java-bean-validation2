@@ -4,11 +4,10 @@ The main goal of this project is to show basic features of Java Bean Validation 
 _Reference_: https://beanvalidation.org/2.0/spec/
 
 In this project we will cover only fields validation, note that JBV 2.0 is much more broader API,
-for example it supports constructor parameters validation or method's return type validation.
+for example it supports constructor's parameters validation or method's return type validation.
 
 # preface
 Useful, self-expressive annotations:
-* @Valid,
 * @Past,
 * @Future
 * @Email, 
@@ -21,11 +20,25 @@ Useful, self-expressive annotations:
 * @PastOrPresent,
 * @FutureOrPresent
 
+If we want to validate relation object, for example:
+```
+class User {
+    Address address;
+}
+```
+we have to add `@Valid` over the relation:
+```
+class User {
+    @Valid
+    Address address;
+}
+```
+
 # project description
 We have class `User` with multiple fields covered with JBV annotations and in `UserValidationTest`
 we test if it works (by filling with illegal values).
 
-In AppRunner we present exemplary error messages.
+In `AppRunner` we present exemplary error messages.
 
 # example
 Consider User entity with fields under validation (only that fields, all others are irrelevant):
